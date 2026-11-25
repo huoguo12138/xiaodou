@@ -1,0 +1,4 @@
+.playwright-cli/
+.dev-server.cjs
+*.log
+.DS_Store
