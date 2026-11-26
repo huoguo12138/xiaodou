@@ -142,6 +142,7 @@ a:hover{text-decoration:underline}
 .stat-v small{font-size:11px;color:var(--ink-3);font-family:var(--font-ui);font-weight:400;margin-left:2px}
 .stat-time{font-size:13px}
 .stat-foot{font-size:11px;color:var(--ink-3);margin-top:2px;padding:8px 0;border-top:1px solid #EDF1F8;line-height:1.6}
+.mock-tag{display:inline-block;margin-left:4px;padding:1px 5px;border:1px solid var(--line-strong);border-radius:999px;background:var(--bg);color:var(--ink-3);font-size:10px;line-height:1.4;vertical-align:1px}
 .clear-tried{margin:4px 0 0;height:28px;padding:0 10px;border:1px solid var(--line);background:var(--surface);border-radius:var(--r-sm);font-size:11px;color:var(--ink-2)}
 .clear-tried:hover{background:#F7F9FE;border-color:#C3CCE0;color:var(--ink)}
 .selfsearch{border-top:1px solid #EDF1F8;padding:12px 0 10px}

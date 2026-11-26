@@ -10,6 +10,8 @@ const PLATFORMS={x:'X（推特）',weibo:'微博',xiaohongshu:'小红书',douyin
 const STATUS_TEXT={available:'可能可用',used_uncertain:'可能已被使用',tried:'我试过'};
 const SORT_TEXT={latest:'最新在前',available:'可能可用在前',oldest:'最早在前'};
 const ALLOWED_STATUS=new Set(['available','used_uncertain']);
+const MOCK_TODAY_VISITORS=128;
+const MOCK_TOTAL_VISITORS=4096;
 
 const el={};
 let tried=new Set();
@@ -52,7 +54,7 @@ function init(){
 }
 
 function cacheDom(){
-  const ids=['refreshBtn','refreshLabel','cacheBanner','cacheText','retryBtn','topTime','heroStatus','heroCode','heroDemoBadge','heroCopyBtn','heroTriedBtn','heroPlatform','heroAuthor','heroCollected','heroNote','searchInput','listMeta','skeleton','listRows','noResult','noResultText','totalStat','todayStat','recentStat','generatedStat','clientReadStat','clearTriedBtn','toast','toastText'];
+  const ids=['refreshBtn','refreshLabel','cacheBanner','cacheText','retryBtn','topTime','heroStatus','heroCode','heroDemoBadge','heroCopyBtn','heroTriedBtn','heroPlatform','heroAuthor','heroCollected','heroNote','searchInput','listMeta','skeleton','listRows','noResult','noResultText','totalStat','todayStat','recentStat','todayVisitorsStat','totalVisitorsStat','generatedStat','clientReadStat','clearTriedBtn','toast','toastText'];
   ids.forEach(id=>{el[id]=document.getElementById(id);});
 }
 
@@ -393,6 +395,8 @@ function renderStats(){
   el.totalStat.innerHTML=rawItems.length+'<small>个</small>';
   el.todayStat.innerHTML=today+'<small>个</small>';
   el.recentStat.innerHTML=recent+'<small>个</small>';
+  el.todayVisitorsStat.innerHTML=MOCK_TODAY_VISITORS+'<small>人</small>';
+  el.totalVisitorsStat.innerHTML=MOCK_TOTAL_VISITORS+'<small>人</small>';
   el.generatedStat.textContent=formatClock(payloadMeta.generated_at);
   el.clientReadStat.textContent=formatClock(lastReadAt);
   el.topTime.textContent=formatClock(payloadMeta.generated_at);
